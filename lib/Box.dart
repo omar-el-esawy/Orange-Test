@@ -19,13 +19,13 @@ class _BoxState extends State<Box> {
 
   @override
   Widget build(BuildContext context) {
-    var colors = [Colors.red, Colors.orange, Colors.green, Colors.amber];
+    // var colors = [Colors.red, Colors.orange, Colors.green, Colors.amber];
     return AnimatedContainer(
       duration: Duration(seconds: 1),
       curve: Curves.fastOutSlowIn,
       width: double.infinity,
       height: widget.hight,
-      color: colors[rand.nextInt(3)],
+      // color: colors[rand.nextInt(3)],
       child: Center(
         child: Text(
           widget.number,

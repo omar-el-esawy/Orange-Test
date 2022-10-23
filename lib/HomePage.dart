@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:untitled2/Box.dart';
+import 'package:untitled2/logic.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -12,8 +13,13 @@ class _HomeState extends State<Home> {
   List<Widget> widgets = [];
   double hight = 0;
   int ind = 1;
-  List<int> list = [1, 2, 3, 4, 5, 6, 7];
   bool flag = true;
+
+  @override
+  void initState() {
+    genrate();
+    super.initState();
+  }
 
   void addElement() {
     print("pressed");
@@ -33,7 +39,7 @@ class _HomeState extends State<Home> {
     if (flag)
       widgets.add(Box(
         hight: hight,
-        number: '1',
+        number: list[0].toString(),
         ind: 0,
       ));
     flag = false;
